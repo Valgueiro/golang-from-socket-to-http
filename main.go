@@ -5,11 +5,9 @@ import (
 )
 
 func main() {
-	s := &server.HTTPServer{
-		Config: server.Config{
-			Port: 8080,
-		},
-	}
+	s := server.NewHttpServer(server.Config{
+		Port: 8080,
+	})
 
 	s.Start()
 }
